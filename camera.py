@@ -1,15 +1,19 @@
-import time, os, glob
+from time import sleep
+from os import remove
+from glob import glob
+from datetime import datetime
 from picamera import PiCamera
 
-for f in glob.glob("Images/*.jpg"):
-    os.remove(f)
+for f in glob("Images/*.jpg"):
+    remove(f)
 
 camera = PiCamera()
 camera.resolution = (1024, 768)
 
-time.sleep(2)
+sleep(2)
 
 while True:
-    camera.capture("Images/latest.jpg")
-    camera.capture(f"{time.time()}.jpg")
-    time.sleep(30)
+    print("Taking Image")
+    current_time = datetime.now().strftime("%d-%m-%Y %H-%M-%S")
+    camera.capture(f"Images/{current_time}.jpg")
+    sleep(30)
