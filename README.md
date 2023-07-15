@@ -1,5 +1,5 @@
-#3D Printer Monitor
-##Ryan Mitcham - 2023
+# 3D Printer Monitor
+## Ryan Mitcham - 2023
 
 This web service is designed to be hosted by an Apache2 webserver on a Raspberry Pi. The Pi should also run the `camera.py` script, that will capture an image every 30 seconds and store it in the `/var/www/html/Images` directory, on boot. 
 <br/>
