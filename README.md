@@ -1,7 +1,8 @@
-3D Printer Monitor
-Ryan Mitcham <ryanmitcham512@gmail.com> - 2023
+#3D Printer Monitor
+##Ryan Mitcham - 2023
 
-The host Raspberry Pi should be running an Apache2 web server, which will display the latest photo, and provide a scroll through time
-
-camera.py - python program that should be set up to run at boot to take photos every minute and saves in a folder (only latest is shown on the website - the others can be extracted for use in time-lapses)
-index.html - takes the latest photo and displays it on the webpage
+This web service is designed to be hosted by an Apache2 webserver on a Raspberry Pi. The Pi should also run the `camera.py` script, that will capture an image every 30 seconds and store it in the `/var/www/html/Images` directory, on boot. 
+<br/>
+Connect a Raspberry Pi Camera Module to the port on your Pi and position it with a view of your print bed. Boot the Pi up and visit `yourhostname.local` in a browser to see the resulting images.
+<br/>
+This project is designed for 3D printers that are not compatible with OctoPrint
