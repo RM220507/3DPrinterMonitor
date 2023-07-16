@@ -15,5 +15,5 @@ sleep(2)
 while True:
     print("Taking Image")
     current_time = datetime.now().strftime("%d-%m-%Y %H-%M-%S")
-    camera.capture(f"Images/{current_time}.jpg")
+    camera.capture(f"/var/www/html/Images/{current_time}.jpg")
     sleep(30)
