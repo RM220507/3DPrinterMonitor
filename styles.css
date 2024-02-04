@@ -25,6 +25,13 @@ h1 {
     text-align: center;
 }
 
+a {
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
 #gallery {
     line-height:0;
     -webkit-column-count:5; /* split it into 5 columns */
@@ -37,7 +44,7 @@ h1 {
     padding-top: 15px;
 }
 
- #gallery img {
+#gallery img {
     width: 100% !important;
     height: auto !important;
     margin-bottom:10px; /* to match column gap */

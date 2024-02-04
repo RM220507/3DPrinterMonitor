@@ -14,19 +14,7 @@
     <div id="data-display">
       <h1>3D Printer Monitor</h1>
       <p>Latest: <?php echo pathinfo($latest, PATHINFO_FILENAME); ?></p>
-      <p>See below for a gallery of recent images</p>
+      <a href="gallery.php">Click to see a Gallery of Images</a>
     </div>
-    <br />
-    <div id="gallery">
-      <?php
-        foreach (array_reverse($files) as $file) {
-          if ($file == "." or $file == "..") {
-            continue;
-          }
-          echo "<img src='Images/$file'>";
-        }
-      ?>
-    </div>
-
   </body>
 </html>
